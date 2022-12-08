@@ -32,11 +32,14 @@
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         if (input.value) {
+          // 触发 chat message 触发器
           socket.emit('chat message', input.value);
           input.value = '';
         }
       });
 
+      // 监听chat message 触发器
+      // 当chat message 触发器被触发时
       socket.on('chat message', function(msg) {
         var item = document.createElement('li');
         item.textContent = msg;
