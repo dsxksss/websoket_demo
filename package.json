@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
+    "nodemon": "^2.0.20",
     "socket.io": "^4.5.4",
     "uuid": "^9.0.0"
   },
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon server.js"
   }
 }
